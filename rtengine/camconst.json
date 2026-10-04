@@ -3310,6 +3310,16 @@ Camera constants:
         "pdaf_offset": 1
     },
 
+    { // Quality C, verified on full-frame lossless compressed raws only
+        "make_model": "Sony ILCE-7RM6",
+        "dcraw_matrix": [ 11765, -5595, -1192, -3689, 11507, 2485, 51, 681, 5731 ], // DNG v18.4.1, from rawspeed
+        "raw_crop": [
+            // Full raw frame 10240x7168, valid data 10016x6672. Crop matches camera default crop and embedded jpeg.
+            { "frame": [ 10240, 7168 ], "crop": [ 12, 8, 9984, 6656 ] }
+        ],
+        "ranges": { "black": 512, "white": 16300 } // hard clip at 16383
+    },
+
     { // Quality B, assumed correct for 9M2 as well
         "make_model": ["Sony ILCE-9","Sony ILCE-9M2"],
         "dcraw_matrix": [ 6389,-1703,-378,-4562,12265,2587,-670,1489,6550 ], // DNG_v9.12 D65
